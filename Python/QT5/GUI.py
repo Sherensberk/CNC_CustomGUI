@@ -92,6 +92,22 @@ class tehseencode(QDialog):
             self.change.setText('Medir')
             self.logic = 0
 
+
+    def Atualiza(self, cap):
+        #self.propbranco.value()
+        cap.set(cv2.CAP_PROP_BRIGHTNESS, self.brilho.value())
+        cap.set(cv2.CAP_PROP_HUE, self.matiz.value())
+        cap.set(cv2.CAP_PROP_CONTRAST, self.contrast.value())
+        cap.set(cv2.CAP_PROP_GAMMA, self.gama.value())
+        cap.set(cv2.CAP_PROP_GAIN, self.ganho.value())
+        cap.set(cv2.CAP_PROP_SATURATION, self.saturacao.value())
+        cap.set(cv2.CAP_PROP_BACKLIGHT, self.luzfundo.value())
+        cap.set(cv2.CAP_PROP_EXPOSURE, self.exposicao.value())
+        #cap.set(cv2.CAP_PROP_WHITE_BALANCE_BLUE_U)
+
+
+
+
     def Mascara(self, img):
         imgHsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
         if self.logic == 0:
@@ -127,24 +143,21 @@ class tehseencode(QDialog):
         while cap.isOpened():
             ret, img = cap.read()
             gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-            HSV = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+            HSV = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
             # h, w = img.shape[:2]
             # newcameramtx, roi = cv2.getOptimalNewCameraMatrix(mtx, dist, (w, h), 1, (w, h))
             # img = cv2.undistort(img, mtx, dist, None, newcameramtx)
+            self.Atualiza(cap)
             if self.logic == 0:
                 self.displayImage(img, 1)
-                print("Zerin")
                 cv2.waitKey(2)
             elif self.logic == 3:
-                print("Treixxx")
                 self.displayImage(gray, 1)
                 cv2.waitKey(2)
             elif self.logic == 4:
-                print("Quatro")
                 self.displayImage(HSV, 1)
                 cv2.waitKey(2)
             if self.logic == 2:
-                print("Dois")
                 cap.release()
                 cv2.destroyAllWindows()
                 sys.exit()
