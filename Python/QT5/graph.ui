@@ -424,7 +424,7 @@ color: rgb(255, 255, 255);
     </rect>
    </property>
    <property name="text">
-    <string>Medir / Identificar</string>
+    <string>Normal</string>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -728,6 +728,111 @@ color: rgb(255, 255, 255);</string>
      </layout>
     </item>
    </layout>
+  </widget>
+  <widget class="QRadioButton" name="IndexCA">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>550</y>
+     <width>82</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Cameda ID:1</string>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="IndexCB">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>570</y>
+     <width>82</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Cameda ID:2</string>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Up">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>610</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>▲</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Down">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>650</y>
+     <width>31</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>▼</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Lef">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>630</y>
+     <width>31</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>◄</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Rig">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>630</y>
+     <width>31</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>►</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Mid">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>630</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>●</string>
+   </property>
   </widget>
  </widget>
  <resources/>

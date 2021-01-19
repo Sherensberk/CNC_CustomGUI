@@ -78,12 +78,12 @@ class tehseencode(QDialog):
     def Troca(self):
         if self.logic == 0:
             self.logic = 3
-            self.change.setText('Verificar')
+            self.change.setText('Mascara')
         elif self.logic == 3:
             self.logic = 4
-            self.change.setText('Detectar')
+            self.change.setText('Filtro')
         elif self.logic == 4:
-            self.change.setText('Medir')
+            self.change.setText('Normal')
             self.logic = 0
 
     def MascaraHSV(self, img, **kwargs):
