@@ -1,5 +1,5 @@
 import cv2
-
+import json
 
 def ScanWebcam(*args):
     for X in range(*args):
@@ -52,6 +52,11 @@ def OpenWebcam(ID, **kargs):
 
 
 
-# ScanWebcam(3)
-OpenWebcam(0, Prefix='Camera:', Sufix='...', Save='../Master/Imagens/Teste', ImgName='CameraA', Trigger='S')
+ScanWebcam(3)
+#OpenWebcam(0, Prefix='Camera:', Sufix='...', Save='../Master/Imagens/Teste', ImgName='CameraA', Trigger='S')
 
+with open("config.json", 'r', encoding='utf-8') as jsonFile:
+    dados = json.load(jsonFile)
+
+with open("Dois.json", 'w', encoding='utf-8') as jsonFile2:
+    json.dump(dados, jsonFile2, indent=4)

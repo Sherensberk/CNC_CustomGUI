@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>892</width>
-    <height>692</height>
+    <width>883</width>
+    <height>701</height>
    </rect>
   </property>
   <property name="font">
@@ -157,10 +157,10 @@ background-color: rgba(42, 79, 106);
       <item>
        <widget class="QSlider" name="h_max">
         <property name="maximum">
-         <number>179</number>
+         <number>255</number>
         </property>
         <property name="value">
-         <number>179</number>
+         <number>255</number>
         </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
@@ -436,11 +436,14 @@ color: rgb(255, 255, 255);
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QCheckBox" name="calib">
+  <widget class="QCheckBox" name="save">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
-     <x>650</x>
-     <y>590</y>
+     <x>20</x>
+     <y>540</y>
      <width>81</width>
      <height>41</height>
     </rect>
@@ -448,8 +451,12 @@ color: rgb(255, 255, 255);
    <property name="autoFillBackground">
     <bool>false</bool>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font: 8pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
-    <string>  [  Calibrar  ]</string>
+    <string>Salvar?</string>
    </property>
    <property name="iconSize">
     <size>
@@ -458,7 +465,7 @@ color: rgb(255, 255, 255);
     </size>
    </property>
    <property name="checked">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
   </widget>
   <widget class="QWidget" name="verticalLayoutWidget_2">
